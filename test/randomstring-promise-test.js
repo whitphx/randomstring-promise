@@ -23,6 +23,26 @@ describe('randomstringPromise', () => {
     expect(random(16)).to.eventually.have.lengthOf(16)
   );
 
+  it('accepts `numeric` as charset paremter', () =>
+    expect(random(10000, 'numeric')).to.eventually.match(/^\d+$/)
+  );
+
+  it('accepts `alphabetic` as charset paremter', () =>
+    expect(random(10000, 'alphabetic')).to.eventually.match(/^[a-zA-Z]+$/)
+  );
+
+  it('accepts `alphanumeric` as charset paremter', () =>
+    expect(random(10000, 'alphanumeric')).to.eventually.match(/^\w+$/)
+  );
+
+  it('accepts `hex` as charset paremter', () =>
+    expect(random(10000, 'hex')).to.eventually.match(/^[0-9abcdef]+$/)
+  );
+
+  it('accepts customized charset paremter', () =>
+    expect(random(10000, 'loremipsum')).to.eventually.match(/^[loremipsum]+$/)
+  );
+
   it('generates unique strings', () => {
     const num = 1000;
     const promises = Array(num);
@@ -42,7 +62,7 @@ describe('randomstringPromise', () => {
     const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const slen = 1000000;
 
-    return random(slen)
+    return random(slen, chars)
     .then(s => {
       const counts = {};
       for (let i = 0; i < s.length; ++i) {

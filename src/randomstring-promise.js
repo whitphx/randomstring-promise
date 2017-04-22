@@ -2,8 +2,10 @@ import crypto from 'crypto';
 
 const randomBytes = crypto.randomBytes;
 
-export default function (length = 32) {
-  const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+import { getCharset } from './charset';
+
+export default function (length = 32, charset = 'alphanumeric') {
+  const chars = getCharset(charset);
   const charsLen = chars.length;
   const maxByte = 256 - (256 % charsLen);
   let targetLength = length;
