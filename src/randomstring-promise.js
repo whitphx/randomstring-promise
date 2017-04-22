@@ -16,7 +16,7 @@ export default function (length = 32, charset = 'alphanumeric') {
       const size = Math.ceil(targetLength * 256 / maxByte);
 
       randomBytes(size, (err, buf) => {
-        if (err) throw err;
+        if (err) reject(err);
 
         for (let i = 0; i < buf.length && targetLength > 0; ++i) {
           const randomByte = buf.readUInt8(i);
