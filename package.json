@@ -22,8 +22,10 @@
     "watchify": "^3.9.0"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-register",
-    "karma": "karma start",
+    "start": "karma start",
+    "test": "npm run mocha && npm run karma",
+    "mocha": "mocha --compilers js:babel-register",
+    "karma": "karma start --single-run",
     "build": "babel --presets es2015 -d . src/",
     "prepublish": "npm run build"
   },
