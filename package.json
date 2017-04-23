@@ -1,6 +1,6 @@
 {
   "name": "randomstring-promise",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Random string generator with Promise interface",
   "main": "index.js",
   "browser": "browser.js",
@@ -30,5 +30,13 @@
     "prepublish": "npm run build"
   },
   "author": "yuichiroTCY",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuttieee/randomstring-promise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tuttieee/randomstring-promise/issues"
+  },
+  "homepage": "https://github.com/tuttieee/randomstring-promise#readme"
 }
