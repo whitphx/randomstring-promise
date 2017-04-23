@@ -61,6 +61,7 @@ describe('randomstringPromise', () => {
   it('generates unbiased strings', () => {
     const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const slen = 1000000;
+    const avg = slen / chars.length;
 
     return random(slen, chars)
     .then(s => {
@@ -70,12 +71,10 @@ describe('randomstringPromise', () => {
         counts[c] = (counts[c] || 0) + 1;
       }
 
-      const avg = slen / chars.length;
-
       Object.keys(counts).sort().forEach(key => {
         const diff = counts[key] / avg;
-        expect(diff).to.closeTo(1, 0.05);
+        expect(diff).to.closeTo(1, 0.05, `Bias on ${key}: expected average is ${avg}, got ${counts[key]}`);
       });
-    })
-  })
+    });
+  });
 });
