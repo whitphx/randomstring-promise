@@ -1,4 +1,7 @@
 # randomstring-promise
+[![wercker status](https://app.wercker.com/status/d79b71786af008574654e31a9fad3d4a/s/master "wercker status")](https://app.wercker.com/project/byKey/d79b71786af008574654e31a9fad3d4a)
+
+
 Random string generator inspired by [node-randomstring](https://github.com/klughammer/node-randomstring) with  consistent promise interface for Nodejs, web browsers, and ReactNative.
 
 This library uses following RNGs to generate cryptographically secure random value.
