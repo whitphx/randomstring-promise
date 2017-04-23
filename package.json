@@ -30,5 +30,13 @@
     "prepublish": "npm run build"
   },
   "author": "yuichiroTCY",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuttieee/randomstring-promise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tuttieee/randomstring-promise/issues"
+  },
+  "homepage": "https://github.com/tuttieee/randomstring-promise#readme"
 }
