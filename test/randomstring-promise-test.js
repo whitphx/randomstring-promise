@@ -3,8 +3,8 @@ import chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised);
 const expect = chai.expect;
 
-import randomNode from '../src/randomstring-promise';
-import randomBrowser from '../src/randomstring-promise-browser';
+import randomNode from '../src/index';
+import randomBrowser from '../src/browser';
 
 let random;
 if (typeof window === 'undefined') {

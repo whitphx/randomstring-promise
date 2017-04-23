@@ -5,3 +5,4 @@ node_modules
 /browser.js
 /react-native.js
 /charset.js
+/gen.js
