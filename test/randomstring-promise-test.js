@@ -3,7 +3,15 @@ import chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised);
 const expect = chai.expect;
 
-import random from '../src/randomstring-promise';
+import randomNode from '../src/randomstring-promise';
+import randomBrowser from '../src/randomstring-promise-browser';
+
+let random;
+if (typeof window === 'undefined') {
+  random = randomNode;
+} else {
+  random = randomBrowser;
+}
 
 describe('randomstringPromise', () => {
   it('provides Promise interface', (done) => {

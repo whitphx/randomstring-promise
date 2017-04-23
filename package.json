@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Random string generator with Promise interface",
   "main": "index.js",
+  "browser": "browser.js",
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.24.1",
