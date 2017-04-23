@@ -24,7 +24,8 @@
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "karma": "karma start",
-    "build": "babel --presets es2015 -d . src/"
+    "build": "babel --presets es2015 -d . src/",
+    "prepublish": "npm run build"
   },
   "author": "yuichiroTCY",
   "license": "MIT"

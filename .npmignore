@@ -1,2 +1,4 @@
 src/
-spec/
+test/
+.babelrc
+karma.conf.js
